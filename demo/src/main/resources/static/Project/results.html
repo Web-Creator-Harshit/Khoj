@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .results-header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .results-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .results-container h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    .results-container p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .results-container .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .results-container .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .recommended-cars, .customer-support, .faqs, .call-to-action {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .recommended-cars h2, .customer-support h2, .faqs h2, .call-to-action h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    .car-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .car-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .car-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .car-item h3 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .car-item p {
+      margin-bottom: 10px;
+    }
+
+    .car-item .btn {
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .car-item .btn:hover {
+      background: #0056b3;
+    }
+    .faqs {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faqs h2 {
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #0056b3;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 15px;
+  background: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+  <header class="results-header">
+    <h1>Search Results</h1>
+  </header>
+  <div class="results-container">
+    <h2>Your Booking Details</h2>
+    <p><strong>Pick Up Location:</strong> <span id="pickupLocation"></span></p>
+    <p><strong>Pick Up Date:</strong> <span id="pickupDate"></span></p>
+    <p><strong>Drop Off Date:</strong> <span id="dropoffDate"></span></p>
+    <a href="index.html" class="btn">Go Back</a>
+
+    <!-- Recommended Cars -->
+    <section class="recommended-cars">
+      <h2>Recommended Cars for You</h2>
+      <div class="car-list">
+        <div class="car-item">
+          <img src="car_1.jpg" alt="Sedan">
+          <h3>Sedan</h3>
+          <p>Comfortable and stylish, perfect for city drives.</p>
+          <p><strong>Price:</strong> $50/day</p>
+          <button class="btn"><a href="book-now.html" style="color: white; text-decoration: none;">Book Now</a></button>
+        </div>
+        <div class="car-item">
+          <img src="car_4.jpg" alt="SUV">
+          <h3>SUV</h3>
+          <p>Spacious and powerful, ideal for family trips.</p>
+          <p><strong>Price:</strong> $70/day</p>
+          <button class="btn"><a href="book-now.html" style="color: white; text-decoration: none;">Book Now</a></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Support -->
+    <section class="customer-support">
+      <h2>Need Help?</h2>
+      <p>If you have any questions or need assistance with your booking, feel free to contact us.</p>
+      <p><strong>Email:</strong> support@carrental.com</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question">What documents do I need to rent a car?</button>
+          <div class="faq-answer">
+            <p>You will need a valid driver's license, a credit card, and proof of identity.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I cancel my booking?</button>
+          <div class="faq-answer">
+            <p>Yes, you can cancel your booking up to 24 hours before the pick-up time without any charges.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are there any additional charges?</button>
+          <div class="faq-answer">
+            <p>Additional charges may apply for fuel, tolls, or late returns. Please check the terms and conditions.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What happens if the car breaks down?</button>
+          <div class="faq-answer">
+            <p>In case of a breakdown, contact our 24/7 support team for assistance. Replacement vehicles may be provided.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I extend my rental period?</button>
+          <div class="faq-answer">
+            <p>Yes, you can extend your rental period by contacting us in advance. Additional charges may apply.</p>
+          </div>
+        </div>
+      </section>
+    <!-- Call-to-Action -->
+    <section class="call-to-action">
+      <h2>Looking for More Options?</h2>
+      <a href="index.html#listing" class="btn">Explore More Cars</a>
+    </section>
+  </div>
+  <script>
+    // Extract query parameters from the URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('pickupLocation').textContent = params.get('pickupLocation') || 'Not Provided';
+    document.getElementById('pickupDate').textContent = params.get('pickupDate') || 'Not Provided';
+    document.getElementById('dropoffDate').textContent = params.get('dropoffDate') || 'Not Provided';
+    
+  // FAQ Dropdown Functionality
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+
+      // Toggle the visibility of the answer
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+
+  </script>
+</body>
+</html>

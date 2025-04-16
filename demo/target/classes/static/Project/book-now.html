@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now - Car Rental</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .book-now-header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .book-now-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-now-container h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    .book-now-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .book-now-container input,
+    .book-now-container select,
+    .book-now-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .book-now-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-now-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header class="book-now-header">
+    <h1>Book Your Car Now</h1>
+  </header>
+  <div class="book-now-container">
+    <h2>Fill in Your Booking Details</h2>
+    <form action="confirmation.html" method="POST">
+      <!-- Car Selection -->
+      <label for="car">Select Your Car</label>
+      <select id="car" name="car" required>
+        <option value="" disabled selected>Select a car</option>
+        <option value="sedan">Sedan - $50/day</option>
+        <option value="suv">SUV - $70/day</option>
+        <option value="hatchback">Hatchback - $40/day</option>
+        <option value="luxury">Luxury - $150/day</option>
+        <option value="convertible">Convertible - $120/day</option>
+      </select>
+
+      <!-- Pick-Up Location -->
+      <label for="pickupLocation">Pick-Up Location</label>
+      <select id="pickupLocation" name="pickupLocation" required>
+        <option value="" disabled selected>Select a location</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="moradabad">Moradabad</option>
+        <option value="delhi">Delhi</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="noida">Noida</option>
+        <option value="gurgaon">Gurgaon</option>
+      </select>
+
+      <!-- Pick-Up Date -->
+      <label for="pickupDate">Pick-Up Date</label>
+      <input type="date" id="pickupDate" name="pickupDate" required>
+
+      <!-- Drop-Off Date -->
+      <label for="dropoffDate">Drop-Off Date</label>
+      <input type="date" id="dropoffDate" name="dropoffDate" required>
+
+      <!-- Additional Notes -->
+      <label for="notes">Additional Notes (Optional)</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Enter any special requests or additional details..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>

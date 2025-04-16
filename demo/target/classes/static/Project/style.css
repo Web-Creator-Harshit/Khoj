@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero {
+    background: url('car_3.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: #000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    color: #000;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    font-weight: normal;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+  
+  .search-box {
+    background: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: stretch; /* Ensure elements take full width */
+    gap: 15px; /* Add spacing between elements */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Match the width of the heading */
+    margin: 0; /* Remove auto-centering */
+  }
+  .search-box select,
+.search-box input,
+.search-box button {
+  width: 100%; /* Make all elements take the full width of the container */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+  
+.search-box button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-box button:hover {
+    background-color: #0056b3;
+  }
+  /* Hover effect for navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative; /* Required for the hover effect */
+    padding: 5px 10px; /* Add padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Light rectangle effect */
+    z-index: -1; /* Place it behind the text */
+    transition: width 0.3s ease; /* Smooth width transition */
+  }
+  
+  .nav-links a:hover::before {
+    width: 100%; /* Expand the rectangle on hover */
+  }
+  
+  .nav-links a:hover {
+    color: #007BFF; /* Optional: Change text color on hover */
+  }
+  
+  /* Hover effect for buttons */
+  button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    position: relative; /* Required for the hover effect */
+    overflow: hidden; /* Prevents the hover effect from spilling out */
+    transition: background 0.3s ease; /* Smooth background transition */
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light rectangle effect */
+    z-index: 0; /* Place it behind the text */
+    transition: width 0.3s ease; /* Smooth width transition */
+  }
+  
+  button:hover::before {
+    width: 100%; /* Expand the rectangle on hover */
+  }
+  
+  button:hover {
+    background: #0056b3; /* Darken the button background on hover */
+  }
+  .testimonials {
+    background-color: #f4f4f4; /* Light background to contrast with the rest of the site */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    color: #007BFF; /* Blue color matching the theme */
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial h4 {
+    font-size: 1.1rem;
+    color: #007BFF;
+    font-weight: bold;
+    text-align: right;
+  }
+  .footer {
+    background-color: #007BFF; /* Blue background matching the theme */
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-about p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #f4f4f4; /* Slightly lighter color on hover */
+  }
+  
+  .footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+  }
+  .footer {
+    background-color: #007BFF; /* Blue background matching the theme */
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-about p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #f4f4f4; /* Slightly lighter color on hover */
+  }
+  
+  .footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+  }
+  .about {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 50px 20px;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    color: #007BFF; /* Blue color matching the theme */
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-content .btn:hover {
+    background-color: #0056b3;
+  }
+  .listing {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .listing h2 {
+    font-size: 2rem;
+    color: #007BFF; /* Blue color matching the theme */
+    margin-bottom: 30px;
+  }
+  
+  .listing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .car-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .car-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .car-card h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+  
+  .car-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .car-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .car-card .btn:hover {
+    background-color: #0056b3;
+  }
+  .listing {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.listing h2 {
+  font-size: 2rem;
+  color: #007BFF; /* Blue color matching the theme */
+  margin-bottom: 30px;
+}
+
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.car-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.car-card h3 {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.car-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.car-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.car-card .btn:hover {
+  background-color: #0056b3;
+}
+.home {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 50px 20px;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .home-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .home-content h2 {
+    font-size: 2rem;
+    color: #007BFF; /* Blue color matching the theme */
+    margin-bottom: 20px;
+  }
+  
+  .home-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .home-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-content .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .home-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .home-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }

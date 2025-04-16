@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Car<span>Rental</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#listing">Listing</a></li>
+        <li><a href="#users">Testimonials</a></li>
+        <li><a href="book-now.html">Book Now</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="#about">About</a></li>
+        
+      </ul>
+    </nav>
+    <div class="hero-content">
+        <h1><strong>Rent a car</strong> is within your finger tips.</h1>
+        <form action="results.html" method="GET" class="search-box">
+          <select name="pickupLocation" required>
+            <option value="" disabled selected>Pick Up Location</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="moradabad">Moradabad</option>
+            <option value="delhi">Delhi</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="noida">Noida</option>
+            <option value="gurgaon">Gurgaon</option>
+          </select>
+          <label for="pickup">Pick UP Date</label>
+          <input type="date" id="pickup" name="pickupDate" required />
+          <label for="dropoffDate">Drop off Date</label>
+          <input type="date" id="dropoffDate" name="dropoffDate" required />
+          <button type="submit">Search Now</button>
+        </form>
+      </div>
+    
+  </header>
+  <section class="home" id="home">
+    <div class="home-container">
+      <div class="home-content">
+        <h2>Welcome to CarRental</h2>
+        <p>
+          Discover the easiest way to rent a car for your next adventure. With a wide range of vehicles, affordable prices, and exceptional customer service, we make car rentals simple and hassle-free.
+        </p>
+        <a href="#listing" class="btn">Explore Cars</a>
+      </div>
+      <div class="home-image">
+        <img src="home_car.jpg" alt="Car Rental">
+      </div>
+    </div>
+  </section>
+<section class="testimonials" id="users">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"The car rental service was seamless and the vehicle was in excellent condition. Highly recommend!"</p>
+        <h4>- John Doe</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Amazing experience! The booking process was easy, and the staff was very helpful."</p>
+        <h4>- Jane Smith</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Affordable prices and great customer service. I will definitely use this service again."</p>
+        <h4>- Michael Brown</h4>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="car_1.jpg" alt="About Car Rental">
+      </div>
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          At <strong>CarRental</strong>, we are committed to providing the best car rental services to our customers. 
+          With a wide range of vehicles to choose from, affordable pricing, and exceptional customer support, 
+          we ensure a seamless and enjoyable experience for all your travel needs.
+        </p>
+        <p>
+          Whether you're planning a road trip, a business meeting, or just need a car for daily use, 
+          we have the perfect solution for you. Our mission is to make car rentals easy, accessible, and reliable.
+        </p>
+        <a href="learn-more.html" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <section class="listing" id="listing">
+    <h2>Available Cars for Rent</h2>
+    <div class="listing-container">
+      <!-- Car Card 1 -->
+      <div class="car-card">
+        <img src="car_7.jpg" alt="Sedan">
+        <h3>Sedan</h3>
+        <p>Comfortable and stylish, perfect for city drives and long trips.</p>
+        <p><strong>Price:</strong> $50/day</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
+        <a href="book-now.html" class="btn" style="color: white; text-decoration: none;">Book Now</a>
+      </div>
+  
+      <!-- Car Card 2 -->
+      <div class="car-card">
+        <img src="car_5.jpg" alt="SUV">
+        <h3>SUV</h3>
+        <p>Spacious and powerful, ideal for family trips and off-road adventures.</p>
+        <p><strong>Price:</strong> $70/day</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+        <a href="book-now.html" class="btn" style="color: white; text-decoration: none;">Book Now</a>
+      </div>
+  
+      <!-- Car Card 3 -->
+      <div class="car-card">
+        <img src="car_4.jpg" alt="Hatchback">
+        <h3>Hatchback</h3>
+        <p>Compact and efficient, great for daily commutes and city travel.</p>
+        <p><strong>Price:</strong> $40/day</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.2/5)</p>
+        <a href="book-now.html" class="btn" style="color: white; text-decoration: none;">Book Now</a>
+      </div>
+  
+      <!-- Car Card 4 -->
+      <div class="car-card">
+        <img src="car_6.jpg" alt="Luxury">
+        <h3>Luxury</h3>
+        <p>Premium and elegant, for those who want to travel in style.</p>
+        <p><strong>Price:</strong> $150/day</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+        <a href="book-now.html" class="btn" style="color: white; text-decoration: none;">Book Now</a>
+      </div>
+  
+      <!-- Car Card 5 -->
+      <div class="car-card">
+        <img src="car_3.jpg" alt="Convertible">
+        <h3>Convertible</h3>
+        <p>Sporty and fun, perfect for a weekend getaway or a special occasion.</p>
+        <p><strong>Price:</strong> $120/day</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.7/5)</p>
+        <a href="book-now.html" class="btn" style="color: white; text-decoration: none;">Book Now</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer" >
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Car<span>Rental</span></h3>
+        <p>Providing the best car rental services with affordable prices and excellent customer support.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Listing</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@carrental.com</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>Address: 123 Car Rental Street, City, Country</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CarRental. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
